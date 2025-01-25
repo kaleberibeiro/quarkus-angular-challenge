@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="formContainer">
+        <input type="number" id="index" [(ngModel)]="this.n">
+        <button (click)="getLabSeqNum()">Calculate</button>
+    </div>
+    <app-result-labseq *ngIf="hasValue" [result]="this.result"></app-result-labseq>
+</div>

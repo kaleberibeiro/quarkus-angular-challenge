@@ -1,0 +1,22 @@
+openapi: 3.0.3
+info:
+  title: Custom API
+  version: 1.0.0
+paths:
+  /labseq/{n}:
+    get:
+      summary: Calculate the sequence value
+      parameters:
+        - name: n
+          in: path
+          required: true
+          description: The non-negative integer index
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The sequence value
+          content:
+            application/json:
+              schema:
+                type: string

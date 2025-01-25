@@ -1,0 +1,23 @@
+.popUpContainer {
+    min-width: 800px;
+    min-height: 400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.titleContainer h1 {
+    color: rgb(28, 151, 28);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 0;
+}

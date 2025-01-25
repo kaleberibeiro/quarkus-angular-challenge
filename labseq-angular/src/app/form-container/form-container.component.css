@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.formContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.formContainer input {
+    height: 40px;
+    outline: none;
+    border: 1px solid rgb(190, 190, 190);
+    padding: 0 7px;
+}
+
+.formContainer button {
+    background-color: rgb(28, 151, 28);
+    cursor: pointer;
+    border: none;
+    width: 120px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
