@@ -17,7 +17,7 @@ export class FormContainerComponent {
   hasValue = false
   error = ''
 
-  constructor(private labseqServ: LabseqServiceService) {}
+  constructor(private labseqServ: LabseqServiceService) { }
 
   getLabSeqNum(): void {
     this.labseqServ.getLabSeqNum(this.n).subscribe({
@@ -27,7 +27,6 @@ export class FormContainerComponent {
         this.result = response
       },
       error: (error) => {
-        console.error(error.error.error);
         this.error = error.error.error;
         this.hasValue = false
       }

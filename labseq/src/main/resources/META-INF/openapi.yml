@@ -7,8 +7,8 @@ paths:
     get:
       summary: Calculate the sequence value
       parameters:
-        - name: n
-          in: path
+        - in: path
+          name: n
           required: true
           description: The non-negative integer index
           schema:
@@ -16,6 +16,12 @@ paths:
       responses:
         '200':
           description: The sequence value
+          content:
+            application/json:
+              schema:
+                type: number
+        '400':
+          description: Bad request. Index must be a non-negative integer
           content:
             application/json:
               schema:

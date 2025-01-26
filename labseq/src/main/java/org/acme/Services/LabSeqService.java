@@ -5,7 +5,7 @@
 package org.acme.Services;
 
 import java.math.BigInteger;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  *
@@ -14,7 +14,16 @@ import java.util.HashMap;
 
 public class LabSeqService {
     
-    HashMap<Integer, BigInteger> labseq = new HashMap<Integer, BigInteger>();
+    private final ConcurrentHashMap<Integer, BigInteger> labseq = new ConcurrentHashMap<>();
+    
+    
+    public LabSeqService() {
+        labseq.put(0, BigInteger.ZERO);
+        labseq.put(1, BigInteger.ONE);
+        labseq.put(2, BigInteger.ZERO);
+        labseq.put(3, BigInteger.ONE);
+    }
+
     
     public BigInteger labSeqCalc (int n)
     {
@@ -22,12 +31,7 @@ public class LabSeqService {
         {
             return labseq.get(n);
         } else {
-            
-            if(n == 0) return BigInteger.ZERO;
-            if(n == 1) return BigInteger.ONE;
-            if(n == 2) return BigInteger.ZERO;
-            if(n == 3) return BigInteger.ONE;
-
+      
             BigInteger a = BigInteger.ZERO;
             BigInteger b = BigInteger.ONE;
             BigInteger c = BigInteger.ZERO;
